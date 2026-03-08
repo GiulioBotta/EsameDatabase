@@ -1,0 +1,1 @@
+psql -h localhost -d quickpack -U postgres -f "C:\Users\miche\Desktop\UNI\Basi di Dati\Progetto\quickpack.sql"

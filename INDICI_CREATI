@@ -1,0 +1,14 @@
+CREATE INDEX clienti_pacchi ON Pacchi (idCliente); -- SECONDARIO
+
+CREATE UNIQUE INDEX indirizzo_sedi ON Sedi (Indirizzo, CAP, Provincia, Regione); -- PRIMARIO
+
+CREATE UNIQUE INDEX contatti_cliente ON Clienti (IdCliente) INCLUDE (Email, NumTelefono); -- PRIMARIO
+
+-- Canc
+CREATE INDEX destPacchi ON Pacchi (IdSedeDestinazione); -- MAI MESSO
+CREATE INDEX stati_pacchi ON stato_spedizioni(idPacco); -- DROPPATO
+
+-- PER VISUALIZZARE TUTTI GLI INDICI DEL DB
+select *
+from pg_indexes
+where tablename not like 'pg%';

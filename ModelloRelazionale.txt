@@ -1,0 +1,7 @@
+CLIENTI (idCliente, nome, cognome, email, numTelefono)
+PACCHI (idPacco, idCliente, dataOrdine, idSedeDestinazione, dimensioni, peso, isFragile)
+STATO_SPEDIZIONI (idPacco, stato, idSedePartenza, idSedeArrivo, dataPartenza*, dataArrivo*, idOperatore)
+OPERATORI (idOperatore, nome, cognome, email, numTelefono, tipoOperatore, sedeLavoro)
+SEDI (idSede, email, numTelefono, tipoSede, indirizzo, CAP, provincia, regione)
+MEZZI (targa, idOperatore, caricoMax, sedeAppartenenza*)
+SUPPORTO (idCliente, idOperatore, orarioInvio, messaggio, isFromCliente)
